@@ -8,3 +8,6 @@ sealed class MagicState extends Equatable {
 }
 
 final class MagicInitial extends MagicState {}
+final class MagicLoading extends MagicState {}
+final class MagicSuccess extends MagicState {}
+final class MagicFailure extends MagicState {}

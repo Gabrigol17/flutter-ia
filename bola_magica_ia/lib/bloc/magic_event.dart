@@ -6,3 +6,5 @@ sealed class MagicEvent extends Equatable {
   @override
   List<Object> get props => [];
 }
+
+class ObtenerRespuestaEvent extends MagicEvent{}
