@@ -15,3 +15,9 @@ class ObtenerRespuestaEvent extends MagicEvent{
   @override
   List<Object> get props => [pregunta];
 }
+class ReiniciarEvent extends MagicEvent {
+  const ReiniciarEvent();
+
+  @override
+  List<Object> get props => [];
+}
