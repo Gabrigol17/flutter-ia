@@ -7,4 +7,11 @@ sealed class MagicEvent extends Equatable {
   List<Object> get props => [];
 }
 
-class ObtenerRespuestaEvent extends MagicEvent{}
+class ObtenerRespuestaEvent extends MagicEvent{
+  final String pregunta;
+
+  const ObtenerRespuestaEvent(this.pregunta);
+
+  @override
+  List<Object> get props => [pregunta];
+}
