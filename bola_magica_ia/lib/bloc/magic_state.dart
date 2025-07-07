@@ -9,5 +9,19 @@ sealed class MagicState extends Equatable {
 
 final class MagicInitial extends MagicState {}
 final class MagicLoading extends MagicState {}
-final class MagicSuccess extends MagicState {}
-final class MagicFailure extends MagicState {}
+final class MagicSuccess extends MagicState {
+  final String respuesta;
+
+  const MagicSuccess(this.respuesta);
+
+  @override
+  List<Object> get props => [respuesta];
+}
+final class MagicFailure extends MagicState {
+  final String error;
+
+  const MagicFailure(this.error);
+
+  @override
+  List<Object> get props => [error];
+}
