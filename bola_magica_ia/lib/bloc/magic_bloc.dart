@@ -1,7 +1,6 @@
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
 import '../API/serviciogpt.dart';
-import '../API/respuestagpt.dart';
 
 part 'magic_event.dart';
 part 'magic_state.dart';
@@ -18,6 +17,9 @@ class MagicBloc extends Bloc<MagicEvent, MagicState> {
       } catch (e) {
         emit(MagicFailure("Error al obtener respuesta: $e"));
       }
+    });
+    on<ReiniciarEvent>((event, emit) {
+      emit(MagicInitial());
     });
   }
 }

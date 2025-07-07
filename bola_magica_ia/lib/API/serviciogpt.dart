@@ -3,10 +3,10 @@ import 'package:http/http.dart' as http;
 import '../API/respuestagpt.dart';
 
 class ServicioApi {
-  final String _apiKey = 'APIKEY'; //token 
+  final String _apiKey = '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'; //token 
 
   Future<Respuesta> obtenerRespuesta(String pregunta) async {
-    final url = Uri.parse('https://api.openai.com/v1/chat/completions');
+    final url = Uri.parse('https://openrouter.ai/api/v1/chat/completions');
 
     final headers = {
       'Content-Type': 'application/json',
@@ -14,7 +14,7 @@ class ServicioApi {
     };
 
     final body = jsonEncode({
-      "model": "gpt-3.5-turbo-0613",
+      "model": "openrouter/cypher-alpha:free",
       "messages": [
         {"role": "system", "content": "Responde como una bola mágica misteriosa."},
         {"role": "user", "content": pregunta}
